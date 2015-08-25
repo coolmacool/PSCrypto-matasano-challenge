@@ -5,7 +5,7 @@ Import-Module $PSScriptRoot\..\..\PSCrypto -Force
 $Data = [Convert]::FromBase64String((Get-Content $PSScriptRoot\7.txt))
 $Key = [Text.Encoding]::UTF8.GetBytes('YELLOW SUBMARINE')
 
-Invoke-AESDecryption -EncryptedData $Data -KeyData $Key
+Invoke-AESECBDecryption -EncryptedData $Data -KeyData $Key
 
 # Outputs
 #
