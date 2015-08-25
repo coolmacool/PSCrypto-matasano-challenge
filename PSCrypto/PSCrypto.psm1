@@ -189,7 +189,7 @@ Function Get-KeySize
     (($Scores | Sort 'Distance')[0]).KeySize
 }
 
-Function Invoke-AESDecryption
+Function Invoke-AESECBDecryption
 {
     [CmdletBinding()] 
     Param (
@@ -224,7 +224,7 @@ Function Invoke-AESDecryption
     $AES.Clear()
 }
 
-Function Invoke-AESEncryption
+Function Invoke-AESECBEncryption
 {
     [CmdletBinding()] 
     Param (
